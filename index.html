@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Turtle Graphics - Versão Compacta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <div class="controls">
+            <h2>Tartaruga Boolimarks</h2>
+            <p><strong>Controles:</strong></p>
+            <ul style="margin-top: 5px; padding-left: 20px;">
+                <li>♠️ Seta para cima: andar para frente</li>
+                <li>♥️ Seta para baixo: andar para trás</li>
+                <li>♦️ Seta direita: girar +5°</li>
+                <li>♣️ Seta esquerda: girar -5°</li>
+                <li>Espaço: alternar caneta</li>
+                <li>Tecla 'P': marcar um ponto</li>
+            </ul>
+            
+            <div class="control-buttons">
+                <button onclick="forward()">Frente (♠️)</button>
+                <button onclick="backward()">Trás (♥️)</button>
+                <button onclick="left()">Esquerda (♣️)</button>
+                <button onclick="right()">Direita (♦️)</button>
+                <button onclick="togglePen()">Caneta (Espaço)</button>
+                <button onclick="markDot()">Ponto (P)</button>
+                <button onclick="clearCanvas()">Limpar</button>
+            </div>
+            
+            <div id="status"></div>
+        </div>
+
+        <div id="turtle-container">
+            <canvas id="turtle-canvas" width="600" height="500"></canvas>
+            <img id="turtle-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgZmlsbD0iIzRjYWY0YiIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjMwIiBmaWxsPSIjM2M5ZjNhIi8+PHBhdGggZD0iTTcwIDUwTDEwMCA1MCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjY1IiBjeT0iNDUiIHI9IjMiIGZpbGw9IiMwMDAiLz48Y2lyY2xlIGN4PSI2NSIgY3k9IjU1IiByPSIzIiBmaWxsPSIjMDAwIi8+PC9zdmc+" alt="Turtle">
+            <div id="pen-indicator"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

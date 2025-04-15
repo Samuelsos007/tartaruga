@@ -1,0 +1,93 @@
+/* Estilos gerais da página */
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* Permite rolagem vertical quando necessário */
+}
+
+/* Container principal do aplicativo */
+#app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Garante que o container ocupe pelo menos toda a altura da viewport */
+}
+
+/* Container da tartaruga e canvas */
+#turtle-container {
+    position: relative;
+    border: 2px solid #333;
+    margin-top: 10px;
+}
+
+/* Estilo do canvas */
+canvas {
+    display: block;
+}
+
+/* Estilo da imagem da tartaruga */
+#turtle-img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transform-origin: center;
+    pointer-events: none;
+    transition: transform 0.1s;
+}
+
+/* Indicador da caneta (linha vermelha) */
+#pen-indicator {
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    background-color: red;
+    transform-origin: left center;
+    pointer-events: none;
+}
+
+/* Painel de controles */
+.controls {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 600px;
+    box-sizing: border-box;
+}
+
+/* Container dos botões de controle */
+.control-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+/* Estilo dos botões */
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Área de status */
+#status {
+    margin-top: 10px;
+    padding: 8px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+/* Personalização da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
